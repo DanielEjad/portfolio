@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Febrero 2023 - Actualidad',
+        title: 'Ejad Industries',
+        description: 
+        'Fundador y único empleado de agencia de Diseño Web y Marketing digital',
+        link: 'https://danielejad.com',
+    },
+    {
+        date: 'Octubre 2022 - Noviembre 2024',
+        title: 'Sabiduría Flor de Lis',
+        description: 
+        'Administrador de sistemas a tiempo parcial',
+        link: 'https://sabiduriaflordelis.com',
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">  
+    {
+        EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience}/>
+        </li>        
+        ))
+    }
+</ol>
+

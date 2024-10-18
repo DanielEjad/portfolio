@@ -1,15 +1,22 @@
 ---
-import LinkedInIcon from '../components/icons/linkedin.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
 import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GithubIcon from '../components/icons/GithubIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+import WorkWebIcon from '../components/icons/WorkWebIcon.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
-<Layout title="Welcome to Daniel">
+<Layout title="Portfolio de Daniel - Desarrollador y Diseñador Web" description='Contrata a Daniel, Desarrollador Fronted freelance con +2 años de experiencia'>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<img class="rounded-full w-40 h-40 mb-5" src="https://imgs.search.brave.com/JVa_MDGOG2EICj_07Qg5jyrEBQ58Wbly-gpxdu7jffc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmNo/emJnci5jb20vZnVs/bC85MjczMjM0MTc2/L2gxOTcyN0UwRS9h/bmltYWw" alt="daniel photo">
+		
+		<SectionContainer class="pt-44 pb-24">
+			<img class="rounded-full size-40 mb-5" src="https://imgs.search.brave.com/JVa_MDGOG2EICj_07Qg5jyrEBQ58Wbly-gpxdu7jffc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmNo/emJnci5jb20vZnVs/bC85MjczMjM0MTc2/L2gxOTcyN0UwRS9h/bmltYWw" alt="daniel photo">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hey, soy Daniel 
+			Hola! Soy Daniel 
 				<a  href="https://www.linkedin.com/in/daniel-fern%C3%A1ndez-s%C3%A1nchez-8259b822b/" target="_blank" rel="noopener" class="flex justify-center items-center">
 					<Badge>Disponible para trabajar</Badge>
 				</a>
@@ -18,14 +25,32 @@ import Layout from '../layouts/Layout.astro';
 				<span class="text-blue-400 font-bold">+2 años de experiencia.</span> Desarrollador Web y Diseñador UX. <span class="text-red-200/90">De Murcia, España.</span> <span class="opacity-80">Especializado en crear soluciones a problemas Reales.</span>
 			</h2>
 
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/in/daniel-fern%C3%A1ndez-s%C3%A1nchez-8259b822b/">
-						<LinkedInIcon class="w-6 h-6"/>
-						LinkeIn
-					</a>
-				</li>
-			</ul>
-		</section>
+			<nav class="flex gap-x-2 mt-4">
+				<SocialPill href="https://www.linkedin.com/in/daniel-fern%C3%A1ndez-s%C3%A1nchez-8259b822b/">
+					<LinkedInIcon class="size-5"/>
+					LinkeIn
+				</SocialPill>
+				<SocialPill href="https://github.com/DanielEjad">
+					<GithubIcon class="size-5"/>
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:info@danielejad.com">
+					<MailIcon class="size-5"/>
+					info@danielejad.com
+				</SocialPill>
+				<SocialPill href="https://danielejad.com">
+					<WorkWebIcon class="size-5"/>
+					Actual work
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		
+		<SectionContainer>
+			<div class="flex gap-3 items-center">
+				<WorkWebIcon/>
+				<h2 class="text-2xl font-semibold">Experiencia laboral</h2>
+			</div>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
