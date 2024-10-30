@@ -6,7 +6,9 @@ import SocialPill from '../components/SocialPill.astro';
 import GithubIcon from '../components/icons/GithubIcon.astro';
 import MailIcon from '../components/icons/MailIcon.astro';
 import WorkWebIcon from '../components/icons/WorkWebIcon.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
 import Experience from '../components/Experience.astro';
+import Proyects from '../components/Proyects.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 ---
 
@@ -41,12 +43,20 @@ import SectionContainer from '../components/SectionContainer.astro';
 			</nav>
 		</SectionContainer>
 		
-		<SectionContainer id="experience">
+		<SectionContainer id="experience" class="pb-24">
 			<div class="flex gap-3 items-center">
 				<WorkWebIcon/>
 				<h2 class="text-2xl font-semibold">Experiencia laboral</h2>
 			</div>
 			<Experience />
+		</SectionContainer>
+		
+		<SectionContainer id="proyects">
+			<div class="flex gap-3 items-center">
+				<CodeIcon/>
+				<h2 class="text-2xl font-semibold">Ultimos proyectos</h2>
+			</div>
+			<Proyects />
 		</SectionContainer>
 	</main>
 </Layout>
